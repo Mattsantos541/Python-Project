@@ -19,11 +19,6 @@ def Withdrawl():
       MA.write('\n')
       MA.write(withdrawl_amount)
   
-    
-
-
-
-
 ##Command Line Checkbook Application
 name= input( "Welcome, may i get your name? ")
 print('Hello ' + str(name))
@@ -42,4 +37,10 @@ if choice > 4 or < 1:
 elif choice== 1:
   current_balance
 elif choice== 2:
+  deposit
+elif choice== 3:
+  Withdrawl
+else choice == 4:
+print("Thank You, Have a nice day")
+
 
