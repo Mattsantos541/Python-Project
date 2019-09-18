@@ -1,4 +1,4 @@
-
+##Command Line Checkbook Application
 import locale
 locale.setlocale( locale.LC_ALL, '' )
 
@@ -31,7 +31,7 @@ def Withdrawl():
 
   
 
-##Command Line Checkbook Application
+
 customer= input( "Welcome, may i get your name? ")
 def menu():
   print('\n')
