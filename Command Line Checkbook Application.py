@@ -18,7 +18,7 @@ def Withdrawl():
   withdrawl_amount= input("How much do you want to withdrawl? ")
   with open ("Master_account.txt", 'a') as MA:
     MA.write('\n')
-    MA.write(withdrawl_amount)
+    MA.write("-" + withdrawl_amount)
 
 #def user_input():
   #choice= input("please enter a number ")
@@ -46,6 +46,7 @@ def menu():
 choice = "1"
 while choice != "4":
   menu()
+  print('\n')
   choice = input("enter a number ")
   if choice == "1":
     current_balance()
