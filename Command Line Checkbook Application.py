@@ -28,9 +28,7 @@ def Withdrawl():
     MA.write('\n')
     MA.write("-" + withdrawl_amount)
 
-#def user_input():
-  #choice= input("please enter a number ")
-  #return choice
+
   
 
 ##Command Line Checkbook Application
@@ -47,11 +45,7 @@ def menu():
   print("4. End Session")
 
 
-#user_input()
-#user_input()
-#if choice > 4 or < 1:
-  #print("Invalid Entry")
-######move on to options
+
 choice = "1"
 while choice != "4":
   menu()
