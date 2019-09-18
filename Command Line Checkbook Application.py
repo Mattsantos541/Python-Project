@@ -3,8 +3,9 @@ def current_balance():
     transactions = MA.readlines()
     amount = 0
     for line in transactions:
+      line = float(line)
       amount+= line
-    print("Your balance is ${0.2f}.".format.amount)
+    print("Your balance is ${0:2f}.".format(amount))
 
 def deposit():
   deposit_amount= input("How much do you want to deposit? ")
@@ -19,35 +20,42 @@ def Withdrawl():
     MA.write('\n')
     MA.write(withdrawl_amount)
 
-def user_input():
-  choice=input("please enter a number ")
+#def user_input():
+  #choice= input("please enter a number ")
+  #return choice
+  
 
 ##Command Line Checkbook Application
 customer= input( "Welcome, may i get your name? ")
-print('Hello ' + str(customer))
-print('\n                                   ')
-print ("What can I do for you today? ")
-print('\n')
-print("1. Current Balance")
-print("2. Deposit")
-print("3. Withdrawl")
-print("4. End Session")
+def menu():
+  print('Hello ' + str(customer))
+  print('\n                                   ')
+  print ("What can I do for you today? ")
+  print('\n')
+  print("1. Current Balance")
+  print("2. Deposit")
+  print("3. Withdrawl")
+  print("4. End Session")
 
-user_input()
 
-choice = input("Please enter a numbert ")
+#user_input()
+#user_input()
 #if choice > 4 or < 1:
   #print("Invalid Entry")
 ######move on to options
-if choice== "1":
-  current_balance()
-elif choice== "2":
-  deposit()
-elif choice== "3":
-  Withdrawl()
-elif choice==:
-  print("Thank You, Have a nice day")
-else:
-  print("Invalid entry, please enter another number")
+choice = "1"
+while choice != "4":
+  menu()
+  choice = input("enter a number ")
+  if choice == "1":
+    current_balance()
+  elif choice == "2":
+    deposit()
+  elif choice == "3":
+    Withdrawl()
+  elif choice == "4":
+    print("Thank You, Have a nice day")
+  else:
+    print("Invalid entry, please enter another number")
 
 
