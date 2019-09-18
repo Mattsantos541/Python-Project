@@ -1,3 +1,9 @@
+
+import locale
+locale.setlocale( locale.LC_ALL, '' )
+
+
+
 def current_balance():
   with open ("Master_account.txt" ,"r") as MA:
     transactions = MA.readlines()
@@ -5,7 +11,9 @@ def current_balance():
     for line in transactions:
       line = float(line)
       amount+= line
-    print("Your balance is ${0:2f}.".format(amount))
+      balance = locale.currency(amount, grouping =True)
+    print("This is your current balance: " + balance)
+    
 
 def deposit():
   deposit_amount= input("How much do you want to deposit? ")
@@ -53,8 +61,10 @@ while choice != "4":
     current_balance()
   elif choice == "2":
     deposit()
+    current_balance()
   elif choice == "3":
     Withdrawl()
+    current_balance()
   elif choice == "4":
     print('\n')
     print("Thank You, Have a nice day")

@@ -11,8 +11,9 @@ def current_balance():
     for line in transactions:
       line = float(line)
       amount+= line
-    print("This is your current balance: ")
-    print (amount)
+      balance = locale.currency(amount, grouping =True)
+    print("This is your current balance: " + balance)
+    
 
 def deposit():
   deposit_amount= input("How much do you want to deposit? ")
@@ -63,7 +64,7 @@ while choice != "4":
     current_balance()
   elif choice == "3":
     Withdrawl()
-    current_balance
+    current_balance()
   elif choice == "4":
     print('\n')
     print("Thank You, Have a nice day")
