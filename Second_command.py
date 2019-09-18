@@ -1,3 +1,8 @@
+import logging
+logging.basicConfig(
+    format='%(asctime)s %(levelname)-8s %(message)s',
+    level=logging.INFO,
+    datefmt='%Y-%m-%d %H:%M:%S')
 
 import locale
 locale.setlocale( locale.LC_ALL, '' )
@@ -47,11 +52,7 @@ def menu():
   print("4. End Session")
 
 
-#user_input()
-#user_input()
-#if choice > 4 or < 1:
-  #print("Invalid Entry")
-######move on to options
+
 choice = "1"
 while choice != "4":
   menu()
@@ -70,5 +71,3 @@ while choice != "4":
     print("Thank You, Have a nice day")
   else:
     print("Invalid entry, please enter another number")
-
-
