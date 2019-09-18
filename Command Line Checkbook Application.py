@@ -28,7 +28,8 @@ def Withdrawl():
 ##Command Line Checkbook Application
 customer= input( "Welcome, may i get your name? ")
 def menu():
-  print('Hello ' + str(customer))
+  print('\n')
+  print('Hello ' + str(customer) + "...")
   print('\n                                   ')
   print ("What can I do for you today? ")
   print('\n')
@@ -55,6 +56,7 @@ while choice != "4":
   elif choice == "3":
     Withdrawl()
   elif choice == "4":
+    print('\n')
     print("Thank You, Have a nice day")
   else:
     print("Invalid entry, please enter another number")
